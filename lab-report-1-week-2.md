@@ -124,7 +124,7 @@
 
     Now, try to log back into ieng6 or do a scp command:
 
-    [login without password]()
+    ![login without password](https://kaijia2022.github.io/cse15l-lab-reports/new%20login.png)
 
     and you don't need to enter your password anymore! yeahhhh!.
 

@@ -5,11 +5,15 @@
 * **Step 1**: 
     - Install the [VScode](https://code.visualstudio.com/Download) that corresponds to your PC operating system and set it up on your PC.
 
-![VScode]()
+    ![VScode](https://kaijia2022.github.io/cse15l-lab-reports/VScode%20official%20website.png)
 
 * **Step 2**: 
     - Open VScode, on the top tool box, look for terminal
     - Place your Cursor on terminal, a dropdown menu will appear. Click  _New Termial_. Now a new terminal will appear on your screen.
+
+    ![new terminal](https://kaijia2022.github.io/cse15l-lab-reports/open_terminal.png)
+
+    ![new terminal](https://kaijia2022.github.io/cse15l-lab-reports/New%20Terminal.png)
 
     - Now, before you do anything in the new terminal,if you are a Windows user, go to Settings -> apps -> applicable features and check if you have OpenSSH Client service installed. If not, google it and download. OpenSSH is the protocal we use to connect from our PC to a remote server.
 
@@ -29,17 +33,17 @@
          ```
      - Type `yes` and hit `ENTER` and you will see the following: 
 
-        [a screenshot of my first login]()
+        ![a screenshot of my first login](https://kaijia2022.github.io/cse15l-lab-reports/SSH.png)
 
      - Now you are in the terminal of the ieng6 remote server. We can use [Unix Commands](https://en.wikipedia.org/wiki/List_of_Unix_commands) to play with this server computer. 
 
         for example: type the command `pwd`, which stands for "**print working direction**", and you will get something like this:
 
-        [pwd]()
+        ![pwd](https://kaijia2022.github.io/cse15l-lab-reports/PWD%20command.png)
 
         Now try `ls`, which stands for "**list**" and all the files in the current directory will be returned. It looks something like this, though the files in your directory might differ from mine.
 
-        [ls]()
+        ![ls](https://kaijia2022.github.io/cse15l-lab-reports/ls.png)
 
         Mess around with some other commands yourself. When you are done, type `exit` to quit the server computer.
     
@@ -50,7 +54,7 @@
 
         for example, I created a new java class called HowDoYouDo.java, inside this class, there is a main method that prints "**How Do You Do, ieng6?**".
 
-        [HowDoYouDo.java]()
+        ![HowDoYouDo.java](https://kaijia2022.github.io/cse15l-lab-reports/HowDoYouDo.png)
 
     - Now, open Command Prompt or open another terminal in VScode, use the `cd` or "**change directory**" command and go to the folder where `HowDoYouDo.java` resides,  type the following Command and enter your password: 
 
@@ -58,17 +62,17 @@
 
         where again, replace `zz` by your own username, and `~` means the home directory of the user, and `/` means its root directory, so together, they represent your root director on the ieng6 server computer.
 
-        [scp]()
+        ![scp](https://kaijia2022.github.io/cse15l-lab-reports/scp.png)
     
     - Log back into ieng6 server computer as you did in step 2, and try the `ls` command again:
 
-        [lst again]()
+        ![lst again](https://kaijia2022.github.io/cse15l-lab-reports/ls%20again.png)
 
         and you see `HowDoYouDo.java` is added in here.
     
     - Lets try compile and run this file on the ieng6 server computer using `javac` and `java`:
 
-        [run HowDoYouDo.java]()
+        ![run HowDoYouDo.java](https://kaijia2022.github.io/cse15l-lab-reports/runHowDoYouDo.png)
 
 * **Step 5**
     
@@ -129,19 +133,19 @@
 
     - make change on the HowDoYouDo.java file in CScode IDE.
 
-    [make change]()
+    ![make change](https://kaijia2022.github.io/cse15l-lab-reports/Change%20HowDoYouDo.png)
 
     - use `scp` to copy it to the server, this time without the need to enter password.
 
-    [scp again with no password]()
+    ![scp again with no password](https://kaijia2022.github.io/cse15l-lab-reports/SCP%20again.png)
 
     - use `ssh cs15lsp22zz@ieng6.ucsd.edu "ls"` to login and list and exit the files in one line of command.
 
-    [login, list and exit]()
+    ![login, list and exit](https://kaijia2022.github.io/cse15l-lab-reports/login,lst,exit.png)
 
     - run multiple commands on one line with `;` semicolons to seperate each command.
 
-    [use one line to execute HowDoYouDo.java on ieng6 and exit]()
+    ![use one line to execute HowDoYouDo.java on ieng6 and exit](https://kaijia2022.github.io/cse15l-lab-reports/login,compile,run,exit.png)
 
 With all these six steps, you have successfully mastered connect and file transfer between your PC and the ieng6 server. WHooohooooooo!!!!!!!!
 

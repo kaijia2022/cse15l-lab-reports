@@ -72,7 +72,84 @@
 
 * **Step 5**
     
-    Every time we want to log into ieng6, we need to enter our password
+    Every time we want to log into ieng6, we need to enter our password, luckily, there is a short cut, we can set up a pair of keys--a public key on the ieng6 computer and a private key on our local PC. And all these is done by a single command: `ssh-keygen`:
+    
+    - Type the command
+
+        $ `ssh-keygen` 
+    
+        on your client computer, and your should expect something like this below:
+
+        ```
+        # on client (your computer)
+        $ ssh-keygen
+        Generating public/private rsa key pair.
+        Enter file in which to save the key (/Users/<user-name>/.ssh/id_rsa): /Users/<user-name>/.ssh/id_rsa
+        Enter passphrase (empty for no passphrase): 
+        ```
+        **Make sure you do not enter any phrase on this line, just hit `ENTER`.**
+        ```
+        Enter same passphrase again: 
+        Your identification has been saved in /Users/<user-name>/.ssh/id_rsa.
+        Your public key has been saved in /Users/<user-name>/.ssh/id_rsa.pub.
+        The key fingerprint is:
+        SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0 <user-name>@<system>.local
+        The key's randomart image is:
+        +---[RSA 3072]----+
+        |                 |
+        |       . . + .   |
+        |      . . B o .  |
+        |     . . B * +.. |
+        |      o S = *.B. |
+        |       = = O.*.*+|
+        |        + * *.BE+|
+        |           +.+.o |
+        |             ..  |
+        +----[SHA256]-----+
+        ```
+
+    - Now, log back into **ieng6** and type the following  command:
+
+        `$ mkdir .ssh`
+
+        which makes a directory to store .ssh to store the public key on your user account on the ieng6 server.
+
+    - Back to your local PC, use scp to copy that public key to ieng6:
+
+        `$ scp /Users/<user-name>/.ssh/id_rsa.pub cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys`
+
+    Now, try to log back into ieng6 or do a scp command:
+
+    [login without password]()
+
+    and you don't need to enter your password anymore! yeahhhh!.
+
+* **Step 6**
+    With the skills we learnt so far, lets see how we can optimize the procedure of: `Modify -- Copy to Server -- Run on Server` process.
+
+    - make change on the HowDoYouDo.java file in CScode IDE.
+
+    [make change]()
+
+    - use `scp` to copy it to the server, this time without the need to enter password.
+
+    [scp again with no password]()
+
+    - use `ssh cs15lsp22zz@ieng6.ucsd.edu "ls"` to login and list and exit the files in one line of command.
+
+    [login, list and exit]()
+
+    - run multiple commands on one line with `;` semicolons to seperate each command.
+
+    [use one line to execute HowDoYouDo.java on ieng6 and exit]()
+
+With all these six steps, you have successfully mastered connect and file transfer between your PC and the ieng6 server. WHooohooooooo!!!!!!!!
+
+
+
+
+
+
 
 
 

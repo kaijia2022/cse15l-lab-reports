@@ -17,7 +17,7 @@
     ![Fix](https://kaijia2022.github.io/cse15l-lab-reports/Bug1%20code%20fix.png)
 
 * Bug #2--Produces the Wrong link
-    - Square Brankets and parenthese behind Escape characters within the square brackets like [this](https://kaijia2022.github.io/markdown-parser/test3-file.md)causes the code to mistake charaters that don't belong to the link to the output.  
+    - Square Brankets and parenthese behind Escape characters within the square brackets like this in [test2-file.md] (https://kaijia2022.github.io/markdown-parser/test3-file.md)causes the code to mistake charaters that don't belong to the link to the output.  
     - The Symptom looked something like this:
 
         expected output: [https://www.overleaf.com/?gclid=EAIaIQobChMIgsPeyfTU9QIVmR-tBh22xwaZEAAYASAAEgLDOfD_Bw]

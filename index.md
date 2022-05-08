@@ -33,4 +33,4 @@ Here are a few youtube videos of the most famous violinists playing the _Four Se
 
 * [Lab Report 2](https://kaijia2022.github.io/cse15l-lab-reports/lab-report-2-week-4.html)
 
-* [Lab Report 3](https://kaijia2022.github.io/cse15l-lab-reports/lab-report-3-week-6.md)
+* [Lab Report 3](https://kaijia2022.github.io/cse15l-lab-reports/lab-report-3-week-6.html)

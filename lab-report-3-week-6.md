@@ -45,8 +45,13 @@
     ![compile and run test on ieng6](https://kaijia2022.github.io/cse15l-lab-reports/run%20markdownTest%20on%20ieng6.png)
         Where I entered the `markdown-parse` directory, and runned the `Makefile` using `make` command (constructed in lab 6). It checks for changes and compiles the target file and runs it, which in this case is the `markdownParseTest.java`
     - Screenshot of combining the above two steps to one
-    ![run is one line](https://kaijia2022.github.io/cse15l-lab-reports/cp%20run%20in%20one%20line.png)
+    ![run is one line 01](https://kaijia2022.github.io/cse15l-lab-reports/Correct%20SCP%20in%20one%20line%2001.png)
+
         Where the `;` seperates two different commands. The order of execution is:
-        copy the directory using `scp -r`; log into ieng6 using configured login `ssh ieng6` and inside the `""` is the argument of the command ssh ieng6. Where we change the directory to `markdown-parse` using `cd` and run the `Makefil` test using `make test`
+        copy the directory using `scp -r`; log into ieng6 using configured login `ssh ieng6` and inside the `""` is the argument of the command ssh ieng6. Where we change the directory to `markdown-parse` using `cd` and then compile and run the tests.
+
+     ![run in one line 02](https://kaijia2022.github.io/cse15l-lab-reports/Correct%20SCP%20in%20one%20line%2002.png)
+
+        and it runs successfully!!
     
 

@@ -24,7 +24,7 @@
 
 
 * **Output running my markdown-parser**
-    - Test Method 1: `PASSED`
+    - Test Method 1: `FAILED`
 
     - Test Method 2: `FAILED`
         -failer message:
@@ -36,7 +36,7 @@
 
 
 * **Output running reviewed markdwon-parser**
-    - Test Method 1: `PASSED`
+    - Test Method 1: `FAILED`
 
     - Test Method 2: `FAILED`
      - failer message:

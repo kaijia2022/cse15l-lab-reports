@@ -8,7 +8,7 @@
 
 * **Junit test Code I wrote for the three test files**
     - Code Snippet 1: 
-    ![test method 1](https://kaijia2022.github.io/cse15l-lab-reports/test-method-1.png)
+    ![test method 1](https://kaijia2022.github.io/cse15l-lab-reports/fixed%20test%201%20expected%20output.png)
         
         - expected output: [url.com, `google.com, goole.com, ucsd.edu]
 
@@ -25,6 +25,8 @@
 
 * **Output running my markdown-parser**
     - Test Method 1: `FAILED`
+        -failier message:
+        ![failing feedback](https://kaijia2022.github.io/cse15l-lab-reports/test%201%20fail%20on%20my%20parser.png)
 
     - Test Method 2: `FAILED`
         -failer message:
@@ -37,6 +39,8 @@
 
 * **Output running reviewed markdwon-parser**
     - Test Method 1: `FAILED`
+        -failier message:
+        ![failing feedback](https://kaijia2022.github.io/cse15l-lab-reports/test%201%20fail%20on%20reviewed%20parser.png)
 
     - Test Method 2: `FAILED`
      - failer message:
@@ -48,7 +52,18 @@
 
 
 * **Questions**
-    - for the `backticks`, my code passed the test, so I do not have to fix it. 
+    - for the `backticks` :
+        - initially I thought all links inside paranthesis should be in the expected output, it is only now that I know only those in blue in the preview are valid links. The fix for this is simple though. 
+
+        - Case 1: check whether there is a backtick before the `openbracket` and a backtick in between `openbracket` and `closebracket`
+
+        - Case 2: check whether there is a backtick before the `closebracket` and a backtick in between `closebracket` and `openparen`
+
+        - if either of the above case satisfies, set `currentIndex` to `closebracket + 1` and use `continue` to go straight to the next iteration. 
+
+        - wrap the above into a helper method, and call it right after we get the `openbracket` and `closebracket` indices. 
+
+        - given the above steps, I am pretty sure they can be done in less than 1o lines of code change.
 
     - for the `nested parenetheses`, `nested brackets`, and `escaped brackets`: 
         - My original code takes account for all escaped characters. So what I need to fix is to take into account links that have `nested parenetheses` or `nested brackets`. However, it is not possible, at least for my implementation, to change less than 10 lines to fix this feature. 

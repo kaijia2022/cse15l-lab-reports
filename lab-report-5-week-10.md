@@ -43,5 +43,10 @@
 
   - the else statement simply adds the link, if the `if` condition is not satisfied. 
 
-  - the next `if` statement checks for link outside the outer close bracket, or the outer link. However, as we can see in the markdown preview, if there is an inner link, the other link should not be included. Therefore, we can simply delete this last `if` clause to fix the bug
+  - the next `if` statement checks for link outside the outer close bracket, or the outer link. However, as we can see in the markdown preview, if there is an inner link, the other link should not be included. Therefore, we can simply delete this last `if` clause to fix the bug.
+
+
+
+
+  
 
